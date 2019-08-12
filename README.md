@@ -23,4 +23,3 @@ TELEGRAM_BUCKET= "osint-telegram-data"
 - TELEGRAM_DATA is where the local data is to be stored through processing
 - TELEGRAM_COUNT is the number of messages to pull from the channel.
 - TELEGRAM_BUCKET is the S3 bucket to send the messages too.
-
