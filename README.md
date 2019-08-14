@@ -1,6 +1,6 @@
 
 This repository provides two apps.
-1. telegram-data-miner.py will iterate through a list of channels collecting messages and writing to an S3 bucket.
+1. telegram-data-miner.py will iterate through a list of channels collecting messages and writing to an S3 bucket.  This can be run as a cron job and continually collect data
 2. telegram-data.py is a listener for a group of channels waiting for messages.  Messages are written to an S3 bucket.  Future
 
 # Telegram Configuration
