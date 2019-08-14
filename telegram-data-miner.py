@@ -64,14 +64,14 @@ with open(data_dir+'/'+channels_file, mode='r') as csv_file, tempfile:
          print('lastid='+str(lastId))
          messages = client.get_messages(group_name, min_id=lastId)
 
-      outfilename=group_name+time.strftime("%Y%m%d-%H%M%S")+'.msq'
+      outfilename=group_name+time.strftime("%Y%m%d-%H%M%S")+'.json'
       outfile=data_dir+'/'+outfilename
       fo = open(outfile, "w+")
       maxid=lastId
       for message in messages:
          msgdict = message.to_dict()
          print(msgdict['id'])
-         fo.write(json.dumps(msgdict, default=date_format))
+         fo.write(json.dumps(msgdict, default=date_format, indent=4))
          id = msgdict['id']
          if(id > maxid):
             maxid = id
